@@ -1,0 +1,17 @@
+Add SSH to github
+https://www.youtube.com/watch?v=lV5mrUYsucU
+
+To clone the repo use 
+git clone <repo-name>
+
+After you make the changes use the git status command to find the changes
+git status
+
+To add the files you can use the 
+git add 
+
+If you pass as,
+git add . => this will monitor all the modiefied and added files instead if you want to give the specific file pass like below,
+git add filedir/filename
+
+
