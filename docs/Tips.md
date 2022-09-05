@@ -1,5 +1,12 @@
 ## Git basics
+**Source**
+
+
+<https://www.youtube.com/watch?v=RGOj5yH7evk>
+
 **Add SSH to github**
+
+
 https://www.youtube.com/watch?v=lV5mrUYsucU
 
 **To clone the repo use**
@@ -92,6 +99,24 @@ git push origin master
 >git push
 >```
 
+
+>Wehenver you make any changes to the files locally, you need to call
+>```
+>git add 
+>```
+>to let the git know that it should register these changes
+>than we do 
+>```
+>git commit
+>```
+>to make this changes permanent locally
+>than we do 
+>```
+>git push
+>```
+>to publish these changes
+
+
 ## Git branching:
 When we create a repo we have only one master branch, all the changes we made when committed will go to this master branch.
 
@@ -110,6 +135,79 @@ Each individual branch is independent, it will not know what changes or what com
 >Once this code is stable you can merge to the master branch
 
 If after merging the feature branch of we notice any bugs in the master branch, we will create a new hotfix branch and we fix and commit in that branch(single) and then we merge to master branch
+
+**To see the available branches inside the git repo we can use the below command**
+```
+git branch
+```
+>If we see the * symbol beside the branches it means we are in that branch
+
+**To create a new branch we use the command**
+```
+git checkout -b <branch_name>
+``` 
+
+>The git checkout is also used to switch between the branches
+
+>Suppose you pass like this,
+>```
+>git checkout -b feature-readme-instructions
+>```
+>>Now if we run
+>>```
+>>git branch
+>>```
+>we can see that the current branch is change to the newly created branch indicated tieh the * symbol. It also shows the master branch (now there are two branches master and feature-readme-instructions)
+
+**To change our branch to the master, we need to pass**
+```
+git checkout master
+```
+
+>Here your master branch can be main instead of master here you need to pass as 
+>```
+>git checkout main
+>```
+
+**Now we change the branch to the newly created branch**
+```
+git checkout <new_branch>
+```
+than to the changes, then we notify the git by using the add
+```
+git add
+```
+
+>We can check the git status
+>```
+>git status
+>```
+
+than we do the
+```
+git commit -m "comments"
+```
+
+This will change only in the new_branch
+
+if we do git checkout master and check we donot see these changes
+
+**To sync the changes of new_branch we use the command
+```
+git merge
+```
+
+**To see the changes, we can use**
+```
+git diff new_branch
+```
+
+
+
+
+
+
+
 
 
 
