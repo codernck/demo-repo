@@ -5,8 +5,7 @@
 
 **Add SSH to github**
 
-
-https://www.youtube.com/watch?v=lV5mrUYsucU
+<https://www.youtube.com/watch?v=lV5mrUYsucU>
 
 **To clone the repo use**
 ```
@@ -201,6 +200,8 @@ git merge
 git diff new_branch
 ```
 
+<<<<<<< HEAD
+=======
 **Now inside the new_branch, we do**
 ```
 git add
@@ -250,6 +251,7 @@ git checkout master
 >here ``` git checkout main ```
 
 Pushing the data from branch to master
+
 
 
 
