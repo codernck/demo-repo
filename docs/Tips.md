@@ -1,13 +1,11 @@
 ## Git basics
 **Source**
 
-
 <https://www.youtube.com/watch?v=RGOj5yH7evk>
 
 **Add SSH to github**
 
-
-https://www.youtube.com/watch?v=lV5mrUYsucU
+<https://www.youtube.com/watch?v=lV5mrUYsucU>
 
 **To clone the repo use**
 ```
@@ -201,6 +199,56 @@ git merge
 ```
 git diff new_branch
 ```
+
+<<<<<<< HEAD
+=======
+**Now inside the new_branch, we do**
+```
+git add
+```
+**than
+```
+git commit -m "comments"
+```
+
+**Now we call the merge command**
+```
+git merge
+```
+
+**But this is not a best practise**
+**Instead we need to call the push on new_branch**
+```
+git checkout new_branch
+git status
+git push
+```
+>This git push will give error as we dont have new_branch inside the github till now
+
+**So to resolve the error we use set-upstream feature as below
+```
+git push --set-upstream origin new_branch
+```
+>--set-upstream is same as -u
+>```
+>git push -u origin new_branch
+>```
+
+This will show also the pull request and how to use it
+
+The pull request will request your code to be reviewed who can add comments to your code or they can approve for merge.
+
+Once the code is merged you can delete your newly created branches
+
+Now we can goto github.com, check the pull request, we can make the comments at line level or entire code level.
+
+then we can resolve the comments then if all is well we can merge.
+
+**Now if we switch to the master repo**
+```
+git checkout master
+```
+>here ``` git checkout main ```
 
 
 
