@@ -7,6 +7,10 @@
 
 <https://www.youtube.com/watch?v=lV5mrUYsucU>
 
+**How to resove conflicts**
+
+<https://www.youtube.com/watch?v=xNVM5UxlFSA>
+
 **To clone the repo use**
 ```
 git clone <repo-name>
@@ -241,6 +245,7 @@ Once the code is merged you can delete your newly created branches
 Now we can goto github.com, check the pull request, we can make the comments at line level or entire code level.
 
 then we can resolve the comments then if all is well we can merge.
+Now we are in the master branch. In github you can see tha new changes.
 
 **Now if we switch to the master repo**
 ```
@@ -248,24 +253,79 @@ git checkout master
 ```
 >here ``` git checkout main ```
 
-Pushing the data from branch to master
 
+Now we are in the master branch in our local system. But we wll not see any changes that are pushed from the branch to the master.
+**To get these changes we need to use**
+```
+git pull origin master
+```
+>If we have upstream ser we can call ```git pull`` instead
 
+**To delete the feature branch we use the below command**
+```
+git branch -d new_branch
+```
 
+**Also to create a new branch we can use**
+```
+git branch <new_branch>
+```
 
+**As already seen we can change the branch using the checkout**
+```
+git checkout <new_branch>
+```
 
+**We can add and commit the modified files in one shot using**
+```
+git commit -am "message"
 
+```
+>Note that ```git commit -am``` will not work for new files will only work for the modified files
 
+**If we are in bran called aaa and we have some changes of bbb which need to be brought into aaa**
+```
+aaa> git merge bbb
+```
+>This is telling that we need to bring bbb repo changes to aaa
 
+**Supppose we have made some hages and we made**
+```
+git add filename
+```
 
+**Now we dont want to use these chages or push these changes than we can call below command**
+```
+git reset filename
+// or also we can call
+git reset  => to apply to all the changes (all files changed)
+```
 
+This is called unstaging the file
 
+**How to undo a commit**
+```
+git reset HEAD~1  // HEAD is last commit 
+// HEAD~1 is last but one commit 
+// and it will go there - undo till there
+```
 
+**To see the log of all the commits made**
+```
+git log
+```
 
+**To go back to particular commit need to copy the hash of the required commit**
+```
+git reset copied_hash
+```
 
+>this will unstage the commit
 
+**To completely remove the commit changes**
+```
+git reset --hard copied_hash
+```
 
-
-
-
-
+**Fork=> will make a complete copy of the code**
+**To clone the code in our repo**
