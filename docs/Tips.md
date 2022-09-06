@@ -200,8 +200,6 @@ git merge
 git diff new_branch
 ```
 
-<<<<<<< HEAD
-=======
 **Now inside the new_branch, we do**
 ```
 git add
