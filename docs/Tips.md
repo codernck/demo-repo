@@ -247,6 +247,7 @@ then we can resolve the comments then if all is well we can merge.
 ```
 git checkout master
 ```
+>here ``` git checkout main ```
 
 
 
