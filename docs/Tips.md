@@ -249,6 +249,7 @@ git checkout master
 ```
 >here ``` git checkout main ```
 
+Pushing the data from branch to master
 
 
 
